@@ -27,6 +27,10 @@ boardItem.forEach( item => {
     item.addEventListener("click", () => {
         let id = item.dataset.position
         console.log(id)
+
+    if (boardTemplate[id] !== ''){
+
+    }        
     })
 
 })

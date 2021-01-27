@@ -1,3 +1,6 @@
+import randomColor from "./randomColor.js"
+randomColor()
+
 const boardItem = document.querySelectorAll(".board__item")
 const reset = document.querySelector(".reset")
 const panel = document.querySelector(".panel")

@@ -1,3 +1,12 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url('../img/tic-tac-toe-bg.jpg');
+    background-size: cover;
+   
+}
+
 h1 {
     text-align: center;
 }
@@ -7,7 +16,7 @@ h1 {
     justify-content: center;
     align-items: center;
     flex-flow: column wrap;
-    .panel{
+   .panel{
         height: 40px;
         font-size: 24px;
         font-weight: 600;
@@ -21,6 +30,7 @@ h1 {
         border: 2px solid black;
         border-radius: 5px;
         padding: 20px;
+        background: white;
         &__item {
             display: flex;
             justify-content: center;
@@ -37,22 +47,18 @@ h1 {
         }
     }
     .reset{
+        width: 330px;
+        height: 50px;
         margin-top: 20px;
-        padding: 10px 20px;
         border-radius: 5px;
         cursor: pointer;
         background-color: #d3d3d3;
         transition: all 0.75s;
         border: 1px solid #000000;
+        font-weight: 600;
+        font-size: 28px;
         &:hover{
             background-color: #808080;
         }
     }
-}
-
-.red{
-    background-color: red !important;
-}
-.blue{
-    background-color: blue !important;
 }

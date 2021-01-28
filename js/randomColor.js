@@ -1,7 +1,7 @@
 function randomColor() {
-    let item = document.querySelectorAll(".board__item")
-    let board = document.querySelector(".board")
-    const reset = document.querySelector(".reset")
+    let item = document.querySelectorAll(".jsItem")
+    let board = document.querySelector(".jsBoard")
+    const reset = document.querySelector(".jsReset")
     let color = `#${Math.random().toString(16).substr(2,6)}`
 
     for (let i = 0; i < item.length; i++) {

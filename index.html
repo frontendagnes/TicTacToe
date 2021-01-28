@@ -18,24 +18,34 @@
     <main>
         <div class = "wrapper">
             <div class = "choice__option">
-                <div class="choice__button"
+                <div class="choice__button">
+                    <button class = "btn btn__x-button js-xBtn">X</button>
+                    <button class = "btn btn__o-button js-oBtn">O</button>
+                </div>
+                <div class = "choice__game">
+                    <button class = "btn btn__computer">
+                        I play with the computer</button>
+                </div>
+                <button class = "btn btn__human">
+                    I play with a human</button>
             </div>
+          
         <div class="board__wrapper">
-            <div class="panel"></div>
-            <div class="board">
-                <div class="board__item" data-position="0"></div>
-                <div class="board__item" data-position="1"></div>
-                <div class="board__item" data-position="2"></div>
-                <div class="board__item" data-position="3"></div>
-                <div class="board__item" data-position="4"></div>
-                <div class="board__item" data-position="5"></div>
-                <div class="board__item" data-position="6"></div>
-                <div class="board__item" data-position="7"></div>
-                <div class="board__item" data-position="8"></div>
+            <div class="panel jsPanel"></div>
+            <div class="board jsBoard">
+                <div class="board__item jsItem" data-position="0"></div>
+                <div class="board__item jsItem" data-position="1"></div>
+                <div class="board__item jsItem" data-position="2"></div>
+                <div class="board__item jsItem" data-position="3"></div>
+                <div class="board__item jsItem" data-position="4"></div>
+                <div class="board__item jsItem" data-position="5"></div>
+                <div class="board__item jsItem" data-position="6"></div>
+                <div class="board__item jsItem" data-position="7"></div>
+                <div class="board__item jsItem" data-position="8"></div>
             </div>
-            <button class="reset">Reset the Game</button>
+            <button class="reset jsReset">Reset the Game</button>
         </div>
-    </div>
+    </div>  
     </main>
     <script type = "module" src="./js/main.js"></script>
 

@@ -10,6 +10,11 @@ h1 {
   text-align: center;
 }
 
+.wrapper {
+  display: flex;
+  flex-flow: column wrap;
+}
+
 .board__wrapper {
   display: flex;
   justify-content: center;
@@ -84,4 +89,16 @@ h1 {
 
 .board__wrapper .reset:hover {
   background-color: #808080;
+}
+
+.btn {
+  padding: 10px 20px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.75s;
+}
+
+.btn:hover {
+  background-color: grey;
 }

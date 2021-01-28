@@ -1,15 +1,21 @@
 import randomColor from "./randomColor.js"
 randomColor()
-
-const boardItem = document.querySelectorAll(".board__item")
-const reset = document.querySelector(".reset")
-const panel = document.querySelector(".panel")
+import xMode from "./xMode.js"
+xMode()
+import oMode from "./oMode.js"
+oMode()
+const boardItem = document.querySelectorAll(".jsItem")
+const reset = document.querySelector(".jsReset")
+const panel = document.querySelector(".jsPanel")
+const oFrist = document.querySelector(".js-oBtn")
+const xFrist = document.querySelector(".js-xBtn")
 
 const PLAYER_O = "fa-circle"
 const PLAYER_X = "fa-times"
 
 let round = 1
 let activeGame = true
+let turn
 
 let winnerTemplate = [
     [0, 1, 2],
@@ -27,6 +33,14 @@ let boardTemplate = [
     '', '', '',
     '', '', ''
 ]
+const turnX = () => {
+    turn = round % 2 === 0 ? PLAYER_O : PLAYER_X
+    return turn
+}
+const turnO = () => {
+    turn = round % 2 === 0 ? PLAYER_X : PLAYER_O
+    return turn
+}
 
 boardItem.forEach(item => {
     item.addEventListener("click", addSymbol)
@@ -34,7 +48,18 @@ boardItem.forEach(item => {
 
 function addSymbol(e) {
     let id = this.dataset.position
-    const turn = round % 2 === 0 ? PLAYER_O : PLAYER_X
+    if (oFrist.classList.contains("activeMode")) {
+        console.log("siemaO")
+        turnO()
+    } else if (xFrist.classList.contains("activeMode")) {
+        console.log("siemaX")
+        turnX()
+    } else {
+        console.log("nie kliknełem")
+        turnX()
+        oFrist.disabled = true
+        xFrist.disabled = true
+    }
     if (boardTemplate[id] === '' && activeGame) {
 
         e.target.classList.add(turn)
@@ -50,13 +75,13 @@ function addSymbol(e) {
     }
     round++
     checkWin()
-    if(checkDraw() && activeGame){
+    if (checkDraw() && activeGame) {
         panel.innerHTML = "Draw"
     }
 }
 
- function checkDraw(){
-     return boardTemplate.indexOf('') === -1
+function checkDraw() {
+    return boardTemplate.indexOf('') === -1
 }
 
 function checkWin() {
@@ -84,6 +109,8 @@ reset.addEventListener("click", resetGame)
 
 function resetGame() {
     activeGame = true
+    oFrist.disabled = false
+    xFrist.disabled = false
     boardTemplate = [
         '', '', '',
         '', '', '',

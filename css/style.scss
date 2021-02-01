@@ -6,19 +6,22 @@ body{
     background-size: cover;
    
 }
-
+button:disabled{
+    cursor: not-allowed;
+}
 h1 {
     text-align: center;
 }
 .wrapper{
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: row wrap;
 }
 .board__wrapper {
     display: flex;
-    justify-content: center;
+    // justify-content: center;
     align-items: center;
     flex-flow: column wrap;
+    width: 50%;
    .panel{
         height: 50px;
         font-size: 36px;

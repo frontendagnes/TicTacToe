@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link REL="shortcut icon" HREF="./img/tic-tac-toe.jpg" TYPE="image/x-icon">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+        integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
     <title>Tic Tac Toe | zabul@81</title>
 </head>
@@ -16,39 +17,46 @@
         <h1>Tic Tac Toe</h1>
     </header>
     <main>
-        <div class = "wrapper">
-            <div class = "choice__option">
-                <div class="choice__button">
-                    <button class = "btn btn__x-button js-xBtn">X</button>
-                    <button class = "btn btn__o-button js-oBtn">O</button>
-                </div>
-                <div class = "choice__game">
-                    <button class = "btn btn__computer js-btnComputer">
-                        I play with the computer</button>
-                </div>
-                <button class = "btn btn__human js-btnHuman">
-                    I play with a human</button>
-            </div>
-          
-        <div class="board__wrapper">
-            <div class="panel jsPanel"></div>
-            <div class="board jsBoard">
-                <div class="board__item jsItem" data-position="0"></div>
-                <div class="board__item jsItem" data-position="1"></div>
-                <div class="board__item jsItem" data-position="2"></div>
-                <div class="board__item jsItem" data-position="3"></div>
-                <div class="board__item jsItem" data-position="4"></div>
-                <div class="board__item jsItem" data-position="5"></div>
-                <div class="board__item jsItem" data-position="6"></div>
-                <div class="board__item jsItem" data-position="7"></div>
-                <div class="board__item jsItem" data-position="8"></div>
-            </div>
-            <button class="reset jsReset">Reset the Game</button>
-        </div>
-    </div>  
-    </main>
-    <script type = "module" src="./js/main.js"></script>
+        <div class="wrapper">
+            <div class="choice__option">
+                <div class="choice__game">
+                    <!-- <select name = "Option-Game" id = "game-mode">
+                        <option value="default" selected>Paly With Human</option>
+                        <option value = "computer">Play With Computer</option>
+                    </select> -->
 
- </body>
+                    <button class="btn btn__computer js-btnComputer">
+                        I play with the computer</button>
+                    <button class="btn btn__human js-btnHuman">
+                        I play with a human</button>
+                </div>
+                <div class="choice__button">
+                    <button class="btn btn__x-button js-xBtn">X</button>
+                    <button class="btn btn__o-button js-oBtn">O</button>
+                </div>
+                
+            </div>
+
+            <div class="board__wrapper">
+                <div class="panel jsPanel"></div>
+                <div class="board jsBoard">
+                    <div class="board__item jsItem" data-position="0"></div>
+                    <div class="board__item jsItem" data-position="1"></div>
+                    <div class="board__item jsItem" data-position="2"></div>
+                    <div class="board__item jsItem" data-position="3"></div>
+                    <div class="board__item jsItem" data-position="4"></div>
+                    <div class="board__item jsItem" data-position="5"></div>
+                    <div class="board__item jsItem" data-position="6"></div>
+                    <div class="board__item jsItem" data-position="7"></div>
+                    <div class="board__item jsItem" data-position="8"></div>
+                </div>
+                <button class="btn btn__done js-doneBtn">Zacznij Grę</button>
+                <button class="reset jsReset">Reset the Game</button>
+            </div>
+        </div>
+    </main>
+    <script type="module" src="./js/main.js"></script>
+
+</body>
 
 </html>

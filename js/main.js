@@ -12,6 +12,19 @@ const oFrist = document.querySelector(".js-oBtn");
 const xFrist = document.querySelector(".js-xBtn");
 const btnComputer = document.querySelector(".js-btnComputer")
 const btnHuman = document.querySelector(".js-btnHuman")
+// const selectMode = document.getElementById("game-mode")
+// let selectOption = selectMode.options
+
+// selectMode.addEventListener("change", (e) => {
+// let selectValue = e.target.value
+// if(selectValue === "default"){
+//   console.log("Człowiek")
+//   playWithHuman()
+// }else{
+//   console.log("komputer")
+//   playWithComputer()
+// }
+// })
 
 const PLAYER_O = "fa-circle";
 const PLAYER_X = "fa-times";
@@ -152,60 +165,41 @@ function checkWin() {
 reset.addEventListener("click", resetGame);
 
 function resetGame() {
-  activeGame = true;
-  oFrist.disabled = false;
-  xFrist.disabled = false;
-  btnHuman.disabled = false;
-  btnComputer.disabled = false;
-  xFrist.classList.remove("activePlayer");
-  oFrist.classList.remove("activePlayer");
-  btnComputer.classList.remove("activeMode");
-  btnHuman.classList.remove("activeMode");
-  boardTemplate = ["", "", "", "", "", "", "", "", ""];
-  round = 1;
-  panel.innerHTML = "";
-  boardItem.forEach((item) => {
-    item.classList.remove("fa-circle", "fa-times", "fas", "far");
-  });
+  // oFrist.classList.remove("activePlayer")
+  // xFrist.classList.remove("activePlayer")
+  // oFrist.disabled = false
+  // xFrist.disabled = false
+
+  // btnHuman.classList.remove("activeMode")
+  // btnComputer.classList.remove("activeMode")
+  // btnComputer.disabled = false
+  // btnHuman.disabled = false
+
+  // round = 1;
+  // activeGame = true;
+  // boardTemplate = ["", "", "", "", "", "", "", "", ""];
+  // panel.innerHTML = "";
+  // boardItem.forEach((item) => {
+  //   item.classList.remove("fa-circle", "fa-times", "fas", "far");
+  // });
+
+  
   randomColor()
+  location.reload()
 }
 
-function activeComputer(){
-btnComputer.addEventListener("click", function(){
-  console.log("Gram z Kompem")
-  btnComputer.classList.add("activeMode")
-  btnHuman.classList.remove("activeMode")
-  // playWithComputer()
-  oFrist.disabled = true
-  xFrist.disabled = true
-  btnHuman.disabled = true
-  btnComputer.disabled = true
-})
-}
-// activeComputer()
-
-function activeHuman(){
-btnHuman.addEventListener("click", function(){
-  console.log("Gram z Ludziem")
-  btnComputer.classList.remove("activeMode")
-  btnHuman.classList.add("activeMode")
-  // playWithHuman()
-  oFrist.disabled = true
-  xFrist.disabled = true
-  btnHuman.disabled = true
-  btnComputer.disabled = true
-})
-}
-// activeHuman()
 function playWithHuman(){
   boardItem.forEach(item => {
     item.addEventListener("click", addSymbol)
   })
   }
+// btnHuman.addEventListener("click", playWithHuman)
+// btnComputer.addEventListener("click", playWithComputer)
+const doneBtn = document.querySelector(".js-doneBtn")
+
+doneBtn.addEventListener("click", startGame)
 
 function startGame(){
-  activeComputer()
-  activeHuman()
   console.log("Zaczynamy")
   if (btnComputer.classList.contains("activeMode")){
     playWithComputer()
@@ -215,10 +209,23 @@ function startGame(){
     playWithHuman()
   }
 }
-startGame()
 
-// btnHuman.addEventListener("click", playWithHuman)
-// btnComputer.addEventListener("click", playWithComputer)
+btnHuman.addEventListener("click", function(){
+  btnHuman.classList.add("activeMode")
+  btnComputer.classList.remove("activeMode")
+  btnComputer.disabled = true
+  btnHuman.disabled = true
+  // startGame()
+  // playWithHuman()
+})
 
-// playWithHuman()
-// playWithComputer()
+btnComputer.addEventListener("click", function(){
+  btnComputer.classList.add("activeMode")
+  btnHuman.classList.remove("activeMode")
+  btnComputer.disabled = true
+  btnHuman.disabled = true
+  oFrist.disabled = true
+  xFrist.disabled = true
+  // startGame()
+  // playWithComputer()
+})

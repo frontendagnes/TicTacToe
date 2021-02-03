@@ -3,8 +3,8 @@ const oFrist = document.querySelector(".js-oBtn")
 const xFrist = document.querySelector(".js-xBtn")
 
     xFrist.addEventListener("click", () =>{
-        xFrist.classList.add("activeMode")
-        oFrist.classList.remove("activeMode")
+        xFrist.classList.add("activePlayer")
+        oFrist.classList.remove("activePlayer")
         oFrist.disabled = true
         xFrist.disabled = true
 

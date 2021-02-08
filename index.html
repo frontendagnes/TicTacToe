@@ -19,22 +19,27 @@
     <main>
         <div class="wrapper">
             <div class="choice__option">
+                <span>Select a Mode:</span>
                 <div class="choice__game">
-                    <!-- <select name = "Option-Game" id = "game-mode">
-                        <option value="default" selected>Paly With Human</option>
-                        <option value = "computer">Play With Computer</option>
-                    </select> -->
-
-                    <button class="btn btn__computer js-btnComputer">
-                        I play with the computer</button>
-                    <button class="btn btn__human js-btnHuman">
-                        I play with a human</button>
+                    <div>
+                        <button class="btn btn__computer js-btnComputer">
+                            I play with the computer</button>
+                        <button class="btn btn__human js-btnHuman">
+                            I play with a human</button>
+                            <button class="btn btn__resetMode jsResetMode">Reset settings</button>
+                    </div>
+                    <div class="panelMode jsMessageMode"></div>
                 </div>
+                <span>Select a Player:</span>
                 <div class="choice__button">
                     <button class="btn btn__x-button js-xBtn">X</button>
                     <button class="btn btn__o-button js-oBtn">O</button>
+                    <div class="panelMode jsMessagePlayer"></div>
                 </div>
-                
+                <div class="choice__approve">
+                    <button class="btn btn__done js-doneBtn">
+                        Start the Game</button>
+                </div>
             </div>
 
             <div class="board__wrapper">
@@ -50,7 +55,6 @@
                     <div class="board__item jsItem" data-position="7"></div>
                     <div class="board__item jsItem" data-position="8"></div>
                 </div>
-                <button class="btn btn__done js-doneBtn">Zacznij Grę</button>
                 <button class="reset jsReset">Reset the Game</button>
             </div>
         </div>

@@ -1,0 +1,22 @@
+@media only screen and (max-width: 600px){
+    h1{
+        color: red !important;
+    }
+
+
+
+.wrapper{
+.choice{
+        &__option{
+            width: 100% !important;
+        }
+    }
+.board{
+    &__wrapper{
+        width: 100% !important;
+        }
+}}
+
+
+
+}

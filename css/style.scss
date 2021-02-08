@@ -1,54 +1,68 @@
-body{
+@import url("./_mobile.css");
+
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     background-image: url('../img/tic-tac-toe-bg.jpg');
     background-size: cover;
-   
+
 }
-button:disabled{
-    cursor: not-allowed;
-}
-h1 {
+span{
+    font-size: 28px;
+    font-weight: 600;
+    border-bottom: 3px solid black;
     text-align: center;
 }
-.wrapper{
+button:disabled {
+    cursor: not-allowed;
+    background-color: rgb(175, 175, 175) !important;
+    // border: 1px solid #ff0000;
+}
+
+h1 {
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 48px;
+    border-bottom: 2px solid;
+}
+
+.wrapper {
     display: flex;
     flex-flow: row wrap;
-}
-.board__wrapper {
-    display: flex;
-    // justify-content: center;
-    align-items: center;
-    flex-flow: column wrap;
-    width: 50%;
-   .panel{
-        height: 50px;
-        font-size: 36px;
-        font-weight: 600;
-        margin-top: 30px;
-        // border: 2px solid yellow;
-        width: 330px;
-        color: red;
-        text-align: center;
-        margin-bottom: 5px;
-        animation: color 1s infinite;
+    width: 100%;
+    justify-content: space-around;
+    .choice {
+        &__option {
+            display: flex;
+            flex-flow: column wrap;
+            width: 30%;
+            justify-content: center;
+            align-items: center;
+        }
+        &__game{
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            text-align: center;
+            padding: 10px;
+            // height: 100px;
+            // border: 2px solid black;
+            margin-top:10px;
+            margin-bottom: 20px;
+        }
+        &__button{
+            margin-top: 20px;
+            text-align: center;
+        }
+        &__approve{
+            width: 100%;
+            margin-top: 20px;
+            text-align: center;
+        }
     }
 
-    @keyframes color{
-        0%{
-            // color: white;
-            opacity: 1;
-        }
-        // 50%{
-        //     opacity: 0.5;
-        // }
-        100%{
-            opacity: 0;
-            // color:red;
-        }
- 
-    }
     .board {
         display: grid;
         grid-template-columns: repeat(3, 100px);
@@ -58,6 +72,7 @@ h1 {
         border-radius: 5px;
         padding: 20px;
         background: white;
+
         &__item {
             display: flex;
             justify-content: center;
@@ -70,37 +85,106 @@ h1 {
             border-radius: 5px;
             color: #ffffff;
             text-shadow: 4px 4px 4px #000000;
+
             &:hover {
                 background-color: #808080;
             }
         }
-    }
-    .reset{
-        width: 330px;
-        height: 50px;
-        margin-top: 20px;
-        border-radius: 5px;
-        cursor: pointer;
-        background-color: #d3d3d3;
-        transition: all 0.75s;
-        border: 1px solid #000000;
-        font-weight: 600;
-        font-size: 28px;
-        color: #ffffff;
-        text-shadow: 4px 4px 4px #000000;
-        &:hover{
-            background-color: #808080;
+
+        &__wrapper {
+            display: flex;
+            // justify-content: center;
+            align-items: center;
+            flex-flow: column wrap;
+            width: 50%;
+
+            .panel {
+                height: 50px;
+                font-size: 36px;
+                font-weight: 600;
+                margin-top: 30px;
+                // border: 2px solid yellow;
+                width: 330px;
+                color: red;
+                text-align: center;
+                margin-bottom: 5px;
+                animation: color 1s infinite;
+            }
+
+        }
+
+        @keyframes color {
+            0% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
         }
     }
 }
 
-.btn{
+.btn {
+    width: 200px;
     padding: 10px 20px;
     margin-bottom: 5px;
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.75s;
-    &:hover{
+    border: transparent;
+    color: #ffffff;
+    text-shadow: 4px 4px 4px #000000;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #008000;
+    &:hover {
         background-color: grey;
     }
+    &__computer{
+        margin-right:5px;
+    }
+    &__done{
+        width: 80%;
+        padding: 20px 10px;
+        background-color: #ff4500;
+        border-radius: 20px;
+        font-size: 26px;
+        &:hover{
+            background-color: rgb(253, 120, 120);
+        }
+    }
+    &__resetMode{
+        // padding: 10px 20px;
+        width: 80%;
+        font-size: 16px;
+        margin-top: 30px;
+        // background-color: rgb(177, 175, 175);
+    }
+}
+
+.reset {
+    width: 330px;
+    height: 50px;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #d3d3d3;
+    transition: all 0.75s;
+    border: 1px solid #000000;
+    font-weight: 600;
+    font-size: 28px;
+    color: #ffffff;
+    text-shadow: 4px 4px 4px #000000;
+    margin-bottom: 20px;
+    &:hover {
+        background-color: #808080;
+    }
+}
+
+.panelMode{
+    height: 60px;
+    font-size: 24px;
+    text-align: center;
+    // margin-top: 20px;
 }

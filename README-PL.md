@@ -10,11 +10,11 @@ Ikonki O i X pobrano z https://fontawesome.com/
 
 ## Contribute
 
-* Source Code:
+* Source Code: https://github.com/zabula81/TicTacToe
 
-* Issue Tracker:
+* Issue Tracker: https://github.com/zabula81/TicTacToe/issues
 
-* View:
+* View: https://zabula81.github.io/TicTacToe/
 
 ### Author
 

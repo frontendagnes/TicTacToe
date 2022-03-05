@@ -14,7 +14,7 @@ The icons O and X have been downloaded https://fontawesome.com/
 
 * Issue Tracker: https://github.com/zabula81/TicTacToe/issues
 
-* View: https://zabula81.github.io/TicTacToe/
+* View: https://frontendagnes.github.io/TicTacToe/
 
 ### Author
 
